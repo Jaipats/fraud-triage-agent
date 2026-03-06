@@ -1,0 +1,24 @@
+command:
+  - uvicorn
+  - main:app
+  - --host
+  - 0.0.0.0
+  - --port
+  - "8000"
+
+env:
+  - name: LAKEBASE_HOST
+    value: "ep-wild-bar-d2yqbtiy.database.us-east-1.cloud.databricks.com"
+  - name: LAKEBASE_DB
+    value: databricks_postgres
+  - name: LAKEBASE_INSTANCE
+    value: fraud-triage
+
+resources:
+  - name: sql-warehouse
+    sql_warehouse:
+      permission: CAN_USE
+  - name: serving-endpoint
+    serving_endpoint:
+      name: fraud_reasoning_agent
+      permission: CAN_QUERY
