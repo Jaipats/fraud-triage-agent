@@ -1,5 +1,7 @@
 # Fraud Triage Agent
 
+![Fraud Triage Agent Architecture](images/architecture.png)
+
 An end-to-end fraud detection and analyst triage system built on Databricks. It combines a Lakeflow (DLT) pipeline for risk scoring, an MLflow-based reasoning agent for plain-English explanations, a Lakebase (serverless Postgres) operational store for sub-second decisions, and a live Databricks App where analysts review, release, or escalate flagged transactions.
 
 ## Architecture
